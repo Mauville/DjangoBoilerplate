@@ -1,7 +1,7 @@
 from pathlib import Path
 from sys import argv
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 APPEND_SLASH = False
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator', },
@@ -30,9 +30,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-ROOT_URLCONF = 'backend.urls'
+ROOT_URLCONF = 'students.urls'
 SECRET_KEY = 'django-insecure-=wi@5sbwc@3*wm#1nw%eu4w@h&80emuclivu_0)n$o-21tvk(f'
 SECURE_SSL_REDIRECT = not DEBUG
+STATIC_URL = '/static/'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -52,4 +53,4 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-WSGI_APPLICATION = 'backend.wsgi.application'
+WSGI_APPLICATION = 'students.wsgi.application'
