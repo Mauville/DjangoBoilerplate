@@ -33,11 +33,12 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'students.urls'
 SECRET_KEY = 'django-insecure-=wi@5sbwc@3*wm#1nw%eu4w@h&80emuclivu_0)n$o-21tvk(f'
 SECURE_SSL_REDIRECT = not DEBUG
+STATIC_ROOT = BASE_DIR / 'static'
 STATIC_URL = '/static/'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [STATIC_ROOT, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
