@@ -66,6 +66,7 @@
           console.log(res);
           if (response.status == 201) {
             alert("El estudiante fue creado exitosamente.");
+                document.getElementById("studentsForm").reset();
           } else {
             var out = "No se pudo crear un estudiante.\n";
             for (var field in res) {
