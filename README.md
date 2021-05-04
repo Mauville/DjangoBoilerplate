@@ -15,10 +15,11 @@ pip install djangorestframework
 ```
 python3 manage.py runserver
 ```
-Se accede en [localhost:8000](http://localhost:8000)
+La pagina de registro se accede en [localhost:8000](http://localhost:8000)
+
+Los endpoints se acceden en [/api/estudiantes/](http://localhost:8000/api/estudiantes/)
 
 ## Correr tests
 ```
 python3 manage.py test -v 2
 ```
-Los enpoints son en [/api/estudiantes/](http://localhost:8000/api/estudiantes/)
