@@ -1,10 +1,10 @@
 from api.models import Estudiante
-from rest_framework import viewsets
+from rest_framework.viewsets import ModelViewSet
 from rest_framework import permissions
 from api.serializers import EstudianteSerializer
 
 
-class EstudianteViewSet(viewsets.ModelViewSet):
+class EstudianteViewSet(ModelViewSet):
     """
     API endpoint that allows students to be viewed or edited.
     """
