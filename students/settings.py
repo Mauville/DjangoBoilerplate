@@ -10,6 +10,13 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator', },
 ]
 BASE_DIR = Path(__file__).resolve().parent.parent
+CORS_ORIGIN_ALLOW_ALL = True
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 DEBUG = (argv[1] == 'runserver')
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -19,16 +26,24 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api',
+    'corsheaders',
+    'rest_framework',
 ]
 LANGUAGE_CODE = 'en-us'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
 ROOT_URLCONF = 'students.urls'
 SECRET_KEY = 'django-insecure-=wi@5sbwc@3*wm#1nw%eu4w@h&80emuclivu_0)n$o-21tvk(f'
 SECURE_SSL_REDIRECT = not DEBUG
