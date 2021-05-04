@@ -33,7 +33,7 @@
       <div class="field">
         <label class="label">Fecha de nacimiento</label>
         <div class="control">
-          <input type="date" name="fecha_nacimiento" value="2021-01-01">
+          <input type="date" name="fecha_nacimiento" value="2015-01-01">
         </div>
       </div>
       <div class="field">
@@ -60,7 +60,25 @@
         },
         body: jsonVal
       })
-        .then(response => console.log(response.json()))
+        .then(async (response) => {
+          var res = await response.json();
+          console.log(response.status);
+          console.log(res);
+          if (response.status == 201) {
+            alert("El estudiante fue creado exitosamente.");
+          } else {
+            var out = "No se pudo crear un estudiante.\n";
+            for (var field in res) {
+              if (field === "fecha_nacimiento") {
+                out += "\n  - " + res[field];
+              } else {
+                out += "\n  - No puede estar vacio " + field;
+              }
+            }
+            console.log(out);
+            alert(out);
+          }
+        })
         .then(result => {
           console.log('Success:', result);
         })

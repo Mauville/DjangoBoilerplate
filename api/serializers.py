@@ -17,7 +17,7 @@ class EstudianteSerializer(serializers.HyperlinkedModelSerializer):
         year = datetime.date.today().year - 18
         month = datetime.date.today().month
         day = datetime.date.today().day
-        if data['fecha_nacimiento'] < datetime.date(year, month, day):
+        if data['fecha_nacimiento'] and data['fecha_nacimiento'] < datetime.date(year, month, day):
             raise serializers.ValidationError(
                 {"fecha_nacimiento": "El estudiante debe ser mayor de 18 años."}
             )
