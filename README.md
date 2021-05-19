@@ -1,7 +1,7 @@
-# Pruebas en DJANGO
-Projecto en DJANGO REST FRAMEWORK para hacer un registro de alumnos con front en HTML que accede a una REST API en Django.
+# Django Tests
+Register Students with a REST API using Django.
 
-Se realizaron pruebas de unidad, integracion y de funcionalidad.
+Unit, integration, automated and functionality test were performed. 
 
 ## Setup
 ```
@@ -22,4 +22,10 @@ Los endpoints se acceden en [/api/estudiantes/](http://localhost:8000/api/estudi
 ## Correr tests
 ```
 python3 manage.py test -v 2
+```
+
+## Run automated tests
+```
+npm i
+npx cypress open
 ```
