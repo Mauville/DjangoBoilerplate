@@ -1,0 +1,22 @@
+{
+  "name": "formulario",
+  "version": "1.0.0",
+  "description": "Projecto en DJANGO REST FRAMEWORK para hacer un registro de alumnos con front en HTML que accede a una REST API en Django.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielBakas/Formulario.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielBakas/Formulario/issues"
+  },
+  "homepage": "https://github.com/DanielBakas/Formulario#readme",
+  "dependencies": {
+    "cypress": "^7.3.0"
+  }
+}
