@@ -11,7 +11,6 @@ describe('Add student', () => {
     });
   });
 });
-
 describe('AgeCheck', () => {
   it('Fail to add student because of age', () => {
     cy.visit('localhost:8000');
@@ -55,3 +54,4 @@ describe('CityCheck', () => {
     });
   });
 });
+
